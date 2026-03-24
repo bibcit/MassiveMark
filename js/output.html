@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<style>         
+          table {
+              border: 1px solid #ccc; 
+              border-collapse: collapse; 
+              width: 100%; 
+              margin: 20px 0; 
+              background-color: #f9f9f9;
+          }
+          th, tr {
+            border-bottom: 1px solid #ccc; 
+            background-color: #fff;
+          }
+          th, td {
+              border: 1px solid #ccc; 
+              color: #333; 
+              padding: 12px;
+          }       
+        </style>
+</head>
+<body>
+<p>The <strong>Dirac delta function</strong> (often written as <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\delta(x)</annotation></semantics></math></span>) is a mathematical object used to model an <strong>idealized point effect</strong>-something that is zero everywhere except at one point, yet has a finite total “strength.”</p>
+<p>It’s not a function in the usual sense; it’s a <strong>distribution (generalized function)</strong>.</p>
+<hr>
+<h2>Intuitive idea</h2>
+<p>Think of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\delta(x)</annotation></semantics></math></span> as an <strong>infinitely tall, infinitely narrow spike at <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x=0</annotation></semantics></math></span></strong> whose total area is 1.</p>
+<hr>
+<h2>Defining properties</h2>
+<h3>1. Zero everywhere except at 0</h3>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn><mspace width="1em"></mspace><mtext>for </mtext><mi>x</mi><mo mathvariant="normal">≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\delta(x) = 0 \quad \text{for } x \neq 0</annotation></semantics></math></span>
+<h3>2. Unit area</h3>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mtext> </mtext><mi>d</mi><mi>x</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\int_{-\infty}^{\infty} \delta(x)\,dx = 1</annotation></semantics></math></span>
+<h3>3. Sifting (sampling) property</h3>
+<p>For any “nice” function <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math></span>,</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mtext> </mtext><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo><mtext> </mtext><mi>d</mi><mi>x</mi><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\int_{-\infty}^{\infty} f(x)\,\delta(x-a)\,dx = f(a)</annotation></semantics></math></span>
+<p>This is the most important property: <strong>the delta function “picks out” the value of a function at a point</strong>.</p>
+<hr>
+<h2>Shifted delta function</h2>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\delta(x-a)</annotation></semantics></math></span>
+<p>represents a spike at <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">x=a</annotation></semantics></math></span> instead of 0.</p>
+<hr>
+<h2>Scaling property</h2>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>δ</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi></mrow></mfrac><mtext> </mtext><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\delta(ax) = \frac{1}{|a|}\,\delta(x)</annotation></semantics></math></span>
+<p>This ensures the area remains 1 even when the spike is compressed or stretched.</p>
+<hr>
+<h2>Physical meaning</h2>
+<p>The Dirac delta is used to represent <strong>point sources</strong>:</p>
+<ul>
+<li>
+<p><strong>Physics</strong></p>
+<ul>
+<li>Point mass: <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>m</mi><mtext> </mtext><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\rho(x) = m\,\delta(x-x_0)</annotation></semantics></math></span></li>
+<li>Point charge in electromagnetism</li>
+<li>Impulse force in mechanics</li>
+</ul>
+</li>
+<li>
+<p><strong>Signal processing</strong></p>
+<ul>
+<li>Ideal impulse signal</li>
+<li>System impulse response</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Relation to ordinary functions</h2>
+<p>You can think of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\delta(x)</annotation></semantics></math></span> as the limit of increasingly narrow functions with unit area, such as:</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>σ</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mn>1</mn><mrow><msqrt><mrow><mn>2</mn><mi>π</mi></mrow></msqrt><mi>σ</mi></mrow></mfrac><msup><mi>e</mi><mrow><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mn>2</mn><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">\delta(x) = \lim_{\sigma \to 0} \frac{1}{\sqrt{2\pi}\sigma} e^{-x^2/(2\sigma^2)}</annotation></semantics></math></span>
+<p>(a Gaussian approximation)</p>
+<hr>
+<h2>Derivative connection</h2>
+<p>The delta function is the derivative of the <strong>Heaviside step function</strong> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(x)</annotation></semantics></math></span>:</p>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mi>H</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\frac{d}{dx}H(x) = \delta(x)</annotation></semantics></math></span>
+<hr>
+<h2>Key takeaway</h2>
+<ul>
+<li>The Dirac delta is <strong>not a real function</strong></li>
+<li>It represents an <strong>idealized point effect</strong></li>
+<li>Its power lies in integration, not pointwise values</li>
+</ul>
+<p>If you want, I can explain it <strong>visually</strong>, <strong>in physics terms</strong>, or <strong>rigorously using distributions</strong>.</p>
+</body>
+</html>
